@@ -19,12 +19,12 @@ RegisterServerEvent("cr_degradation:removeItem")
 AddEventHandler("cr_degradation:removeItem", function(item, itemData) 
     local _source = source
 
-
     if item ~= nil then
-        VORPInv.subItemID(_source, itemData.id)
+        local meta = itemData.metadata
 
+        VORPInv.subItemID(_source, itemData.id)
         if Config.UseSpoiledItem then
-            VORPInv.addItem(_source, item.itemSpoiled, 1, { description = item.label.." spoiled", quality = 0, added_at = meta.added_at })
+            VORPInv.addItem(_source, item.itemSpoiled, 1, { description = item.label.." spoiled", added_at = meta.added_at })
         end
     end
 
