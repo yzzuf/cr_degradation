@@ -5,7 +5,7 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 author 'fuzzy'
 lua54 'yes'
 description 'A degradation script for itens'
-version "1.0"
+version "1.1"
 
 server_scripts {
     'server/*.lua',
