@@ -9,6 +9,7 @@ version "1.0"
 
 server_scripts {
     'server/*.lua',
+    'version.lua'
 }
 
 shared_script {
