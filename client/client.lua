@@ -27,7 +27,7 @@ local function degradeItems(itemsToDegrade)
         local notificationSent = false
         local _source = source
 
-        if item then
+        if item ~= nil then
             if not meta.added_at then
                 Wait(500)
                 TriggerServerEvent("cr_degradation:setItemMetadata", itemData, { added_at = currentTime })
